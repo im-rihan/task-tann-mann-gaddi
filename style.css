@@ -19,9 +19,8 @@ body {
 :focus {
   outline: none;
 }
-a{
-    text-decoration: none;
-    
+a {
+  text-decoration: none;
 }
 /* Registration form start */
 .frame {
@@ -32,18 +31,21 @@ a{
   margin-left: auto;
   margin-right: auto;
   border-top: solid 1px rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: all 0.5s ease;
 }
-
+.frame.hide {
+  display: none;
+  transition: all 0.5s ease;
+}
 .frame-long {
-  height: 615px;
+  height: 600px;
 }
 
 .frame-short {
-  height: 400px;
+  height: 350px;
   margin-top: 50px;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
 }
@@ -58,6 +60,9 @@ a{
 .nav-up {
   transform: translateY(-100px);
   opacity: 0;
+}
+.links {
+  padding-left: 37px;
 }
 li {
   padding-left: 10px;
@@ -83,19 +88,19 @@ li {
   border-bottom: none;
   cursor: pointer;
 }
+.signup-inactive a {
+  padding-bottom: 0;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+}
 .signup-active a {
   padding-bottom: 10px;
   color: #ffffff;
   text-decoration: none;
   border-bottom: solid 2px #1059ff;
   transition: all 0.25s ease;
-  cursor: pointer;
-}
-.signup-inactive a {
-  padding-bottom: 0;
-  color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
-  border-bottom: none;
   cursor: pointer;
 }
 
@@ -107,13 +112,41 @@ li {
   font-weight: 300;
   padding-left: 37px;
   padding-right: 37px;
-  padding-top: 55px;
+  padding-top: 15px;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .form-signin-left {
   transform: translateX(-400px);
   opacity: 0;
 }
+/* Forgot */
+.forgot {
+  height: 100px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 24px;
+  margin-top: -420px;
+  border-top: solid 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.5s ease;
+}
+.forgot-left {
+  transform: translateX(-400px);
+  opacity: 0;
+}
+
+.forgot-fade {
+  opacity: 0;
+}
+
+.forgot a {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 400;
+  font-size: 13px;
+  text-decoration: none;
+}
+
 /* form sign up */
 .form-signup {
   width: 430px;
@@ -122,7 +155,7 @@ li {
   font-weight: 300;
   padding-left: 37px;
   padding-right: 37px;
-  padding-top: 55px;
+  padding-top: 15px;
   position: relative;
   top: -375px;
   left: 400px;
@@ -150,7 +183,7 @@ li {
   padding-left: 15px;
   border: none;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
   background: rgba(255, 255, 255, 0.2);
 }
 label {
@@ -309,3 +342,107 @@ a.btn-signin:hover {
   background-color: #0f4fe6;
   transition: background-color 0.5s;
 }
+
+/* Errors */
+.errorCode {
+  margin-bottom: 4px;
+  padding-left: 13px;
+}
+
+/* Heading */
+.content {
+  min-height: 100vh;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+.content.hide {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.heading {
+  color: #444;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+}
+/* gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 15px;
+  align-items: flex-start;
+  padding: 5px 5%;
+}
+.gallery .main-video {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+.gallery .main-video video {
+  width: 100%;
+  border-radius: 5px;
+}
+.gallery .main-video .title {
+  color: #333;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 23px;
+}
+.gallery .video-list {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow-y: scroll;
+  height: 520px;
+  overflow-x: hidden;
+}
+.gallery .video-list ::-webkit-scrollbar {
+  width: 7px;
+}
+.gallery .video-list ::-webkit-scrollbar-track {
+  background-color: #ccc;
+  border-radius: 50px;
+}
+.gallery .video-list ::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 50px;
+}
+.gallery .video-list .vid video {
+  width: 100px;
+  border-radius: 5px;
+}
+.gallery .video-list .vid {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.gallery .video-list .vid:hover {
+  background: #eee;
+}
+.gallery .video-list .vid.active {
+  background: #2980b9;
+}
+.gallery .video-list .vid.active .title {
+  color: #fff;
+}
+.gallery .video-list .vid .title {
+  color: #333;
+}
+/* Resposible */
+@media (max-width: 991px) {
+  .gallery {
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+

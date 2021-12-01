@@ -14,7 +14,7 @@
 
 
     <div class="container">
-        <div class="frame">
+        <div class="frame ">
             <div class="nav">
                 <ul class="links">
                     <li class="signin-active"><a href='#' class="btn">Sign in</a></li>
@@ -22,7 +22,8 @@
                 </ul>
             </div>
             <div>
-                <form class="form-signin">
+                <!-- Sign in -->
+                <form class="form-signin" id='form-signin-post'>
                     <label for="username">Username</label>
                     <input class="form-styling" type="text" name="username" placeholder="" />
                     <label for="password">Password</label>
@@ -38,19 +39,102 @@
                     </div>
                 </form>
 
-                <form class="form-signup">
+                <!-- Sign Up -->
+                <form class="form-signup" id="form-signup-post">
                     <label for="fullname">Full name</label>
                     <input class="form-styling" type="text" name="fullname" placeholder="" />
-                    <label for="email">Email</label>
-                    <input class="form-styling" type="text" name="email" placeholder="" />
-                    <label for="password">Password</label>
-                    <input class="form-styling" type="text" name="password" placeholder="" />
-                    <label for="confirmpassword">Confirm password</label>
-                    <input class="form-styling" type="text" name="confirmpassword" placeholder="" />
+                    <label for="phone">Mobile No</label>
+                    <input type="phone" class="form-styling" name='phone' placeholder='' />
+                    <div> <label for="email">Email</label>
+                        <input class="form-styling" type="text" name="email" id="email" placeholder=""
+                            autocomplete="off" />
+                        <span id='alert'>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input class="form-styling" type="text" name="password" id='pass' placeholder=""
+                            autocomplete='off' />
+                        <span class='errorCode'></span>
+                    </div>
+                    <div>
+                        <label for="confirmpassword">Confirm password</label>
+                        <input class="form-styling" type="text" name="confirmpassword" id="mpass" placeholder=""
+                            autocomplete='off' />
+                        <span class="errorCode"></span>
+                    </div>
                     <a href="#" class="btn-signup">Sign Up</a>
                 </form>
+                <!-- Forgot Botton -->
+                <div class="forgot">
+                    <a href="#">Forgot Your Password ?</a>
+                </div>
+
             </div>
         </div>
+
+        <div class="content hide">
+            <!-- Heading -->
+            <h3 class='heading'>Video Gallery</h3>
+
+            <!-- video gallery -->
+            <div class="gallery">
+                <div class="main-video">
+                    <div class="video">
+                        <video
+                            src="https://vod-progressive.akamaized.net/exp=1638361377~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2529%2F23%2F587646749%2F2772470317.mp4~hmac=edc4a43253e036c842a6faa87fc2721a0241bf273bb88ebce5da179060e15212/vimeo-prod-skyfire-std-us/01/2529/23/587646749/2772470317.mp4?filename=Road+-+84970.mp4"
+                            controls muted autoplay></video>
+                        <h3 class="title">01 titles goes here</h3>
+                    </div>
+                </div>
+                <div class="video-list">
+                    <div class="vid active">
+                        <video
+                            src="https://vod-progressive.akamaized.net/exp=1638361476~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2529%2F23%2F587646755%2F2772557028.mp4~hmac=99e8aacee7a448e5f3fa99cb6934865aaf9513c81eef683158500d5632e4eab8/vimeo-prod-skyfire-std-us/01/2529/23/587646755/2772557028.mp4?filename=People+-+84973.mp4"
+                            controls muted autoplay></video>
+                        <h3 class="title">01 titles goes here</h3>
+                    </div>
+                    <div class="vid">
+                        <video
+                            src="https://vod-progressive.akamaized.net/exp=1638366239~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3863%2F21%2F544315311%2F2581224682.mp4~hmac=466ed3912e78a76ec2ef982689d7495163ebd2fc7346dc961ae6b6b643fdeab0/vimeo-prod-skyfire-std-us/01/3863/21/544315311/2581224682.mp4?filename=Flowers+-+72763.mp4"
+                            controls muted autoplay></video>
+                        <h3 class="title">02 titles goes here</h3>
+                    </div>
+                    <div class="vid">
+                        <video
+                            src="https://vod-progressive.akamaized.net/exp=1638366275~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2245%2F19%2F486227472%2F2178183146.mp4~hmac=eb826fab6897c6ddb674122c275a2b303259d61490f199f97cd0cf57ea4df429/vimeo-prod-skyfire-std-us/01/2245/19/486227472/2178183146.mp4?filename=Sheep+-+57647.mp4"
+                            controls muted autoplay></video>
+                        <h3 class="title">03 titles goes here</h3>
+                    </div>
+                    <div class="vid">
+                        <video
+                            src="https://vod-progressive.akamaized.net/exp=1638366329~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2735%2F23%2F588675395%2F2776925141.mp4~hmac=68626289cb8a35cf8d0cabb71321d0195bbafde1b14aefe84a1fabc77b5a9661/vimeo-prod-skyfire-std-us/01/2735/23/588675395/2776925141.mp4?filename=River+-+85373.mp4"
+                            controls muted autoplay></video>
+                        <h3 class="title">04 titles goes here</h3>
+                    </div>
+                    <div class="vid">
+                        <video
+                            src="https://vod-progressive.akamaized.net/exp=1638366359~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F104%2F26%2F650523430%2F2985066529.mp4~hmac=33b69be6281ef986c8fda04d6e3dda4e73eb4b262c3091c4f1bc71b0a9d73235/vimeo-prod-skyfire-std-us/01/104/26/650523430/2985066529.mp4?filename=Cabin+-+98979.mp4"
+                            controls muted autoplay></video>
+                        <h3 class="title">05 titles goes here</h3>
+                    </div>
+                    <div class="vid">
+                        <video
+                            src="https://vod-progressive.akamaized.net/exp=1638366400~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2775%2F21%2F538877060%2F2554448071.mp4~hmac=308347ea3f71eb36a0fd0b83afdcaab9b0c79ee7d198498122f1d7f10d2123fe/vimeo-prod-skyfire-std-us/01/2775/21/538877060/2554448071.mp4?filename=Waves+-+70796.mp4"
+                            controls muted autoplay></video>
+                        <h3 class="title">06 titles goes here</h3>
+                    </div>
+                    <div class="vid">
+                        <video
+                            src="https://vod-progressive.akamaized.net/exp=1638361476~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2529%2F23%2F587646755%2F2772557028.mp4~hmac=99e8aacee7a448e5f3fa99cb6934865aaf9513c81eef683158500d5632e4eab8/vimeo-prod-skyfire-std-us/01/2529/23/587646755/2772557028.mp4?filename=People+-+84973.mp4"
+                            controls muted autoplay></video>
+                        <h3 class="title">07 titles goes here</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <script src="./jquery-3.6.0.min.js"></script>
     <script src="./main.js"></script>
